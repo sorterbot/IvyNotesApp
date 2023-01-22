@@ -2,7 +2,7 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Link,
+  
 } from "react-router-dom";
 import './App.css';
 import {Header} from './components/Header'
@@ -13,7 +13,7 @@ import { NotesListPage } from "./pages/NotesListPage";
 function App() {
   return (
     <Router>
-    <div className="container">
+    <div className="container dark">
       <div className="app">
       <Header />
       <Route path='/' exact component={NotesListPage} />

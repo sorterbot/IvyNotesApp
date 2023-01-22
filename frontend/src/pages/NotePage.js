@@ -1,6 +1,8 @@
 import React from 'react'
 import notes from '../assets/data'
+import { Link } from 'react-router-dom'
 //import notes from '../assets/data'
+import {ReactComponent as ArrowLeft} from '../assets/arrow-left.svg'
 
 
 export const NotePage = ({match}) => {
@@ -8,11 +10,19 @@ export const NotePage = ({match}) => {
 
     let note = notes[(noteid-1)]
     return (
-        <div>
-            <div className='note-page'>
-                <p>{note.id}</p>
-                <p>{note.body}</p>
+        
+            <div className='note'>
+                <div className='note-header'>
+                    <h3>
+                        <Link to='/' >
+                            <ArrowLeft />
+                        </Link>
+                    </h3>
+                </div>
+
+                <textarea value={note?.body}>
+                </textarea>
             </div>
-        </div>
+        
       )
     }
